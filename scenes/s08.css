@@ -15,12 +15,14 @@
 #s08 .s8-tl { position: relative; margin-top: clamp(28px, 6vh, 60px); height: clamp(300px, 42vh, 380px); }
 #s08 .s8-line { position: absolute; left: 0; right: 0; top: 14px; height: 2px; background: var(--line); }
 #s08 .s8-line i { display: block; height: 100%; background: linear-gradient(90deg, var(--gold), var(--accent)); transform-origin: 0 50%; transform: scaleX(0); box-shadow: 0 0 18px var(--accent); }
-#s08 .s8-nodes { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+#s08 .s8-nodes { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+#s08 .s8-node:last-child .d { color: var(--gold); }
+#s08 .s8-node:last-child h4 { color: var(--gold); }
 #s08 .s8-node { position: relative; padding-top: 52px; opacity: .3; transition: opacity .5s; }
 #s08 .s8-node::before { content: ""; position: absolute; left: 0; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: #2a1a14; border: 2px solid var(--line); transition: all .5s; }
 #s08 .s8-node.on { opacity: 1; }
 #s08 .s8-node.on::before { background: var(--accent); border-color: var(--gold); box-shadow: 0 0 0 6px rgba(217,119,87,.2), 0 0 28px var(--accent); }
-#s08 .s8-node h4 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 2.8vw, 48px); line-height: 1; }
+#s08 .s8-node h4 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 2.4vw, 42px); line-height: 1; }
 #s08 .s8-node p { margin-top: 12px; color: #cfc3bc; font-size: clamp(14px, 1.05vw, 18px); line-height: 1.45; max-width: 24ch; }
 #s08 .s8-note { margin-top: 36px; font-family: var(--serif); font-style: italic; font-size: clamp(18px, 1.5vw, 26px); color: var(--gold); max-width: 60ch; opacity: .85; }
 #s08 .s8-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }

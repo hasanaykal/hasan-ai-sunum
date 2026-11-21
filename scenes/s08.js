@@ -9,6 +9,7 @@ export default async function init(el, { gsap, ScrollTrigger }) {
     ['Claude 3.5', 'Ekim 2024', 'Claude 3.5 Sonnet (yükseltilmiş) ve 3.5 Haiku', 'Computer use ve güçlü kodlama'],
     ['Claude 4', 'Mayıs 2025', 'Claude Opus 4 ve Claude Sonnet 4', 'Uzun süren kodlama, araştırma ve agent iş akışları'],
     ['Sonnet 4.6', 'Şubat 2026', 'Claude Sonnet 4.6', 'Kod, computer use, uzun bağlam ve planlama yeteneklerinin yükselmesi'],
+    ['Claude 5', 'Bugün', 'Opus 5.5 · Sonnet 5.5 · Haiku 5.5', 'Kasım 2026 itibarıyla en güncel Claude kuşağı'],
   ];
   const eco = [
     ['Claude.ai', 'Bireysel ve ekip kullanımı: yazma, analiz, araştırma, dosya ve proje çalışmaları.'],
