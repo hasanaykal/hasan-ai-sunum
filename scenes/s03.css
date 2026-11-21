@@ -1,0 +1,24 @@
+#s03 { background: var(--bg); }
+#s03 .s03-pin { position: relative; height: 100vh; overflow: hidden; }
+#s03 .s03-track { position: relative; display: flex; align-items: stretch; height: 100%; width: max-content; will-change: transform; }
+#s03 .s03-line, #s03 .s03-fill { position: absolute; left: 0; top: 50%; height: 2px; width: 100%; margin-top: -1px; }
+#s03 .s03-line { background: var(--line); }
+#s03 .s03-fill { background: linear-gradient(90deg, var(--accent-2), var(--gold) 60%, var(--accent)); transform-origin: 0 50%; transform: scaleX(0); box-shadow: 0 0 18px rgba(110,168,255,.55); }
+#s03 .s03-intro { position: relative; flex: 0 0 100vw; display: flex; align-items: center; }
+#s03 .s03-intro .wrap { width: 100%; margin: 0; max-width: none; }
+#s03 .s03-intro .h2 { font-size: clamp(44px, 6vw, 108px); max-width: 15ch; }
+#s03 .s03-intro .lead { margin-top: clamp(20px, 3.4vh, 40px); max-width: 38ch; }
+#s03 .s03-intro .eyebrow { margin-bottom: clamp(16px, 2.6vh, 30px); }
+#s03 .s03-intro .s03-scroll { margin-top: clamp(28px, 5vh, 56px); display: inline-flex; gap: 12px; align-items: center; font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+#s03 .s03-stop { position: relative; flex: 0 0 max(46vw, 560px); height: 100%; }
+#s03 .s03-year { position: absolute; left: 0; right: 0; bottom: calc(50% + 34px); font-family: var(--serif); font-size: clamp(96px, 11vw, 210px); line-height: .85; letter-spacing: -.03em; white-space: nowrap; color: var(--fg); }
+#s03 .s03-year span { display: inline-block; }
+#s03 .s03-dot { position: absolute; left: 0; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--bg); border: 2px solid var(--muted); transition: background .6s, border-color .6s, box-shadow .6s, transform .6s cubic-bezier(.16,1,.3,1); }
+#s03 .s03-stop.on .s03-dot { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 8px rgba(217,119,87,.16), 0 0 28px rgba(217,119,87,.8); transform: scale(1.25); }
+#s03 .s03-body { position: absolute; left: 0; top: calc(50% + 34px); max-width: 30vw; min-width: 380px; display: grid; gap: 10px; }
+#s03 .s03-ic { width: 68px; height: 68px; color: var(--accent-2); overflow: visible; margin-bottom: 8px; }
+#s03 .s03-ic * { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#s03 .s03-body h3 { font-size: clamp(22px, 2vw, 34px); }
+#s03 .s03-body p { font-size: clamp(15px, 1.25vw, 21px); line-height: 1.45; color: var(--muted); }
+#s03 .s03-end { flex: 0 0 24vw; }
+#s03 .source { position: absolute; right: var(--gutter); bottom: 28px; z-index: 5; }

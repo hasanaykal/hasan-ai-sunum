@@ -1,0 +1,14 @@
+#s01 { height: 100vh; min-height: 100vh; background: radial-gradient(ellipse at 70% 45%, #0e1020 0%, #050507 62%); }
+#s01 .s01-hero { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .13; z-index: 0; mix-blend-mode: screen; pointer-events: none; }
+#s01 .s01-vignette { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(5,5,7,.85) 100%); }
+#s01 .s01-copy { position: absolute; z-index: 3; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
+#s01 .s01-copy .wrap { width: 100%; }
+#s01 .eyebrow { margin-bottom: clamp(20px, 3vh, 36px); }
+#s01 .h1 { font-size: clamp(64px, 10.5vw, 190px); overflow: visible; perspective: 800px; }
+#s01 .lead { margin-top: clamp(24px, 4vh, 48px); max-width: 34ch; }
+#s01 .s01-foot { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; pointer-events: none; }
+#s01 .s01-id { position: absolute; left: var(--gutter); bottom: clamp(24px, 4vh, 48px); font-family: var(--mono); font-size: 13px; letter-spacing: .18em; color: var(--muted); }
+#s01 .s01-hint { position: absolute; right: var(--gutter); bottom: clamp(24px, 4vh, 48px); display: flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+#s01 .s01-hint i { display: block; width: 1px; height: 44px; background: linear-gradient(var(--fg), transparent); transform-origin: 50% 0; }
+@keyframes s01drip { 0% { transform: scaleY(0); opacity: 1; } 55% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { #s01 .s01-hint i { animation: none; } }

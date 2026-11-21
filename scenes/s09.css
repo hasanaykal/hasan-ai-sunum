@@ -1,0 +1,15 @@
+#s09 { background: linear-gradient(180deg, #120806 0%, var(--bg) 22%); padding: 16vh 0 14vh; }
+#s09 .s9-h { margin: 18px 0 0; max-width: 18ch; }
+#s09 .s9-cols { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 64px; border-top: 1px solid var(--line); }
+#s09 .s9-col { padding: 40px 28px 44px; border-left: 1px solid var(--line); opacity: 0; transform: translateX(80px); position: relative; transition: background .4s; }
+#s09 .s9-col:first-child { border-left: 0; }
+#s09 .s9-col:hover { background: rgba(255,255,255,.03); }
+#s09 .s9-co { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+#s09 .s9-name { font-family: var(--serif); font-size: clamp(36px, 3.4vw, 64px); line-height: 1; margin: 16px 0 28px; }
+#s09 .s9-col p { font-size: clamp(15px, 1.2vw, 20px); line-height: 1.5; color: #b4b4ba; max-width: 24ch; }
+#s09 .s9-col.me { background: linear-gradient(180deg, rgba(217,119,87,.14), rgba(217,119,87,0) 70%); }
+#s09 .s9-col.me .s9-name { color: var(--accent); }
+#s09 .s9-col.me::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 2px; background: var(--accent); box-shadow: 0 0 20px var(--accent); }
+#s09 .s9-note { margin-top: 48px; font-family: var(--serif); font-style: italic; font-size: clamp(20px, 1.8vw, 30px); color: var(--gold); max-width: 50ch; opacity: 0; }
+#s09 .s9-src { margin-top: 28px; display: block; }
+@media (max-width: 900px) { #s09 .s9-cols { grid-template-columns: 1fr 1fr; } }

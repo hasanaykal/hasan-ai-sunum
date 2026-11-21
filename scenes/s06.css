@@ -1,0 +1,28 @@
+#s06 { background: radial-gradient(100% 80% at 50% 100%, #12100f 0%, var(--bg) 70%); }
+#s06 .s06-pin { position: relative; height: 100vh; width: 100%; overflow: hidden; }
+#s06 .s06-glow { position: absolute; left: 30%; top: 52%; width: 50vw; height: 40vh; margin-top: -20vh; background: radial-gradient(closest-side, rgba(217,119,87,.12), transparent 70%); filter: blur(30px); pointer-events: none; }
+
+#s06 .s06-head-wrap { position: absolute; left: 0; right: 0; top: 6vh; }
+#s06 .s06-head-wrap .eyebrow { margin-bottom: 18px; }
+#s06 .s06-title { font-size: clamp(40px, 4.8vw, 84px); margin-bottom: 20px; }
+#s06 .s06-lead { max-width: 60ch; font-size: clamp(16px, 1.3vw, 22px); }
+
+#s06 .s06-row { position: absolute; left: 0; right: 0; top: 36vh; display: flex; align-items: flex-end; justify-content: space-between; gap: 4vw; max-width: 1440px; margin: 0 auto; }
+#s06 .s06-figs { display: flex; align-items: flex-end; gap: clamp(18px, 2.6vw, 48px); }
+#s06 .s06-fig { width: clamp(90px, 9.4vw, 180px); height: auto; overflow: visible; will-change: transform; }
+#s06 .s06-head, #s06 .s06-body { fill: rgba(255,255,255,.2); }
+
+#s06 .s06-counter { display: flex; align-items: baseline; gap: .18em; font-family: var(--serif); line-height: 1; white-space: nowrap; }
+#s06 .s06-num { display: inline-block; height: 1em; overflow: hidden; font-size: clamp(90px, 11vw, 210px); color: var(--fg); }
+#s06 .s06-digits { display: flex; flex-direction: column; will-change: transform; }
+#s06 .s06-digits i { display: block; height: 1em; line-height: 1; font-style: normal; }
+#s06 .s06-slash { font-size: clamp(50px, 6vw, 112px); color: var(--muted); font-style: italic; }
+
+#s06 .s06-texts { position: absolute; left: 0; right: 0; top: 70vh; max-width: 1440px; margin: 0 auto; }
+#s06 .s06-t { position: absolute; left: var(--gutter); right: var(--gutter); font-family: var(--serif); font-size: clamp(30px, 3.5vw, 62px); line-height: 1.12; letter-spacing: -.01em; max-width: 26ch; }
+#s06 .s06-t1 { max-width: 28ch; }
+#s06 .s06-t em { color: var(--accent); }
+#s06 .s06-t2 { max-width: 24ch; color: var(--fg); }
+#s06 .s06-source { position: absolute; right: var(--gutter); bottom: 3vh; }
+
+@media (max-height: 800px) { #s06 .s06-row { top: 34vh; } #s06 .s06-texts { top: 68vh; } }

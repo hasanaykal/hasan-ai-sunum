@@ -1,0 +1,23 @@
+#s11 { background: var(--bg); }
+#s11 .s11-hero { min-height: 100vh; display: flex; align-items: center; padding: 14vh 0; }
+#s11 .s11-h { margin: 20px 0 28px; font-size: clamp(54px, 8.4vw, 150px); max-width: 14ch; }
+#s11 .s11-h .w { display: inline-block; }
+#s11 .s11-lead { max-width: 48ch; }
+#s11 .s11-pts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
+#s11 .s11-pt { padding: 32px; opacity: 0; transform: translateY(50px); }
+#s11 .s11-pt .n { font-family: var(--serif); font-size: clamp(48px, 4.6vw, 80px); color: var(--accent); line-height: 1; }
+#s11 .s11-pt h4 { font-size: clamp(20px, 1.7vw, 28px); font-weight: 500; margin-top: 14px; }
+#s11 .s11-pt p { margin-top: 8px; color: #a9acb6; font-size: clamp(14px, 1.1vw, 18px); line-height: 1.5; }
+#s11 .s11-close { height: 100vh; display: grid; place-items: center; text-align: center; position: relative; background: radial-gradient(60% 50% at 50% 55%, rgba(217,119,87,.16), transparent 70%); }
+#s11 .s11-cs { font-family: var(--serif); font-size: clamp(40px, 5.6vw, 100px); line-height: 1.02; letter-spacing: -.015em; max-width: 18ch; margin: 0 auto; }
+#s11 .s11-cs .w { display: inline-block; }
+#s11 .s11-thx { margin-top: 7vh; opacity: 0; transform: translateY(30px); }
+#s11 .s11-thx b { display: block; font-family: var(--serif); font-weight: 400; font-style: italic; font-size: clamp(54px, 6vw, 110px); }
+#s11 .s11-thx span { display: block; margin-top: 12px; font-family: var(--mono); font-size: 14px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+#s11 .s11-refs { padding: 10vh 0 8vh; border-top: 1px solid var(--line); }
+#s11 .s11-refs ol { list-style: none; margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 56px; font-family: var(--mono); font-size: 12px; line-height: 1.5; }
+#s11 .s11-refs li { display: grid; grid-template-columns: 34px 1fr; color: var(--muted); }
+#s11 .s11-refs a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; transition: color .25s, border-color .25s; word-break: break-word; }
+#s11 .s11-refs a:hover, #s11 .s11-refs a:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+#s11 .s11-refs em { font-style: normal; color: #c9cad2; }
+@media (max-width: 900px) { #s11 .s11-pts, #s11 .s11-refs ol { grid-template-columns: 1fr; } }
