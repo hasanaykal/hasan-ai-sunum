@@ -50,3 +50,30 @@ for (const el of sections) {
   }
 }
 ScrollTrigger.refresh();
+
+// Pencere boyu değişirse (ör. sayfa açıkken F11'e basılırsa) pin mesafeleri bayat kalıyor.
+// Çözüm: boyut oturunca sayfayı yeniden yükle, kaydırma oranını koru.
+history.scrollRestoration = 'manual';
+try {
+  const r = parseFloat(sessionStorage.getItem('scrollRatio'));
+  sessionStorage.removeItem('scrollRatio');
+  if (r > 0) setTimeout(() => {
+    const y = r * (document.documentElement.scrollHeight - innerHeight);
+    window.scrollTo(0, y);
+    lenis.scrollTo(y, { immediate: true, force: true });
+    ScrollTrigger.update();
+  }, 400);
+} catch (_) {}
+let lastW = innerWidth, lastH = innerHeight, resizeTimer;
+addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (Math.abs(innerWidth - lastW) < 40 && Math.abs(innerHeight - lastH) < 40) return;
+    lastW = innerWidth; lastH = innerHeight;
+    try {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      sessionStorage.setItem('scrollRatio', String(max > 0 ? scrollY / max : 0));
+    } catch (_) {}
+    location.reload();
+  }, 450);
+});
