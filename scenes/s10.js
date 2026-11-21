@@ -85,11 +85,12 @@ export default async function init(el, { gsap, ScrollTrigger, THREE }) {
   add(shoulder, new THREE.BoxGeometry(L1 - 0.6, 0.12, 0.62), dark, L1 / 2, 0, 0);
   const elbow = new THREE.Group(); elbow.position.x = L1; shoulder.add(elbow);
   const ej = add(elbow, new THREE.CylinderGeometry(0.34, 0.34, 0.8, 36), orange); ej.rotation.x = Math.PI / 2;
-  add(elbow, new THREE.BoxGeometry(L2, 0.3, 0.4), metal, L2 / 2, 0, 0);
+  add(elbow, new THREE.BoxGeometry(L2, 0.36, 0.46), metal, L2 / 2, 0, 0);
   const wrist = new THREE.Group(); wrist.position.x = L2; elbow.add(wrist);
-  add(wrist, new THREE.SphereGeometry(0.26, 32, 24), orange);
+  add(wrist, new THREE.SphereGeometry(0.3, 32, 24), orange);
+  const wj = add(wrist, new THREE.CylinderGeometry(0.22, 0.22, 0.55, 32), dark); wj.rotation.x = Math.PI / 2;
   const grip = new THREE.Group(); wrist.add(grip);
-  add(grip, new THREE.BoxGeometry(0.28, 0.5, 0.5), dark, 0.2, 0, 0);
+  add(grip, new THREE.BoxGeometry(0.36, 0.5, 0.5), dark, 0.22, 0, 0);
   const fing = [add(grip, new THREE.BoxGeometry(0.5, 0.1, 0.12), metal, 0.55, 0.22, 0), add(grip, new THREE.BoxGeometry(0.5, 0.1, 0.12), metal, 0.55, -0.22, 0)];
   const tip = new THREE.PointLight(0xffffff, 0, 5); tip.position.set(0.6, 0, 0); grip.add(tip);
 
@@ -150,7 +151,10 @@ export default async function init(el, { gsap, ScrollTrigger, THREE }) {
     const w = stage.clientWidth || 1, h = stage.clientHeight || 1;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
-    camera.position.z = w / h < 1.3 ? 14 : 10.5;
+    camera.position.z = w / h < 1.3 ? 14 : (h < 820 ? 11.6 : 10.8);
+    camera.lookAt(0, 1.3, -1.2);
+    // sahneyi sağa ve biraz aşağı kaydır: başlık ve alt kartlarla çakışmasın
+    if (w / h >= 1.3) camera.setViewOffset(w, h, -w * 0.09, h * 0.02, w, h); else camera.clearViewOffset();
     camera.updateProjectionMatrix();
   }
   new ResizeObserver(resize).observe(stage); resize();

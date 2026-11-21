@@ -12,7 +12,7 @@
 #s02 .rl { font-family: var(--sans); font-weight: 500; font-size: 21px; letter-spacing: -.01em; fill: var(--fg); text-anchor: middle; }
 #s02 .rl.sm { font-size: 17px; }
 #s02 .s02-defs { list-style: none; display: grid; gap: clamp(14px, 2.6vh, 28px); }
-#s02 .s02-def { position: relative; padding-left: 26px; transition: opacity .6s cubic-bezier(.16,1,.3,1); }
+#s02 .s02-def { position: relative; padding-left: 26px; }
 #s02 .s02-def::before { content: ''; position: absolute; left: 0; top: .35em; bottom: .35em; width: 2px; border-radius: 2px; background: var(--c); }
 #s02 .s02-def h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.2vw, 56px); line-height: 1; color: var(--c); margin-bottom: .35em; }
 #s02 .s02-def p { font-size: clamp(15px, 1.25vw, 21px); line-height: 1.5; color: var(--muted); max-width: 44ch; }

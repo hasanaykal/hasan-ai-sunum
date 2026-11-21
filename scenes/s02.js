@@ -51,9 +51,9 @@ export default async function init(el, { gsap, ScrollTrigger, SplitText }) {
   // ---------- B: 4 halka ----------
   const groups = [...el.querySelectorAll('.rg')];
   const items = [...el.querySelectorAll('.s02-def')];
-  gsap.set(items, { opacity: 0, y: 30 });
+  gsap.set(items, { opacity: 0.2, y: 14, filter: 'grayscale(1)' });
   const tl = gsap.timeline({
-    scrollTrigger: { trigger: '#s02 .s02-b', start: 'top top', end: reduced ? '+=150%' : '+=320%', pin: true, scrub: 0.8 },
+    scrollTrigger: { trigger: '#s02 .s02-b', start: 'top top', end: reduced ? '+=250%' : '+=520%', pin: true, scrub: 0.8 },
   });
   groups.forEach((g, i) => {
     const ring = g.querySelector('.ring'), label = g.querySelector('text');
@@ -61,8 +61,8 @@ export default async function init(el, { gsap, ScrollTrigger, SplitText }) {
     tl.fromTo(ring, { drawSVG: '0%' }, { drawSVG: '100%', duration: 1, ease: 'power3.inOut' }, t)
       .to(ring, { fillOpacity: 0.07 + i * 0.015, duration: 0.8, ease: 'power2.out' }, t + 0.5)
       .to(label, { fillOpacity: 1, duration: 0.6, ease: 'power3.out' }, t + 0.7)
-      .to(items[i], { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, t + 0.35);
-    if (i > 0) tl.to(items[i - 1], { opacity: 0.32, duration: 0.6, ease: 'power2.out' }, t + 0.35);
+      .to(items[i], { opacity: 1, y: 0, filter: 'grayscale(0)', duration: 0.8, ease: 'power3.out' }, t + 0.35);
+    if (i > 0) tl.to(items[i - 1], { opacity: 0.72, duration: 0.6, ease: 'power2.out' }, t + 0.35);
   });
-  tl.to({}, { duration: 0.8 });
+  tl.to({}, { duration: 3.6 });
 }

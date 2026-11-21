@@ -4,11 +4,11 @@ export default async function init(el, { gsap, ScrollTrigger }) {
   document.head.appendChild(link);
 
   const nodes = [
-    ['Claude 2', 'Uzun bağlam ve genel sohbet'],
-    ['Claude 3', 'Haiku • Sonnet • Opus; hız/zeka/maliyet dengesi'],
-    ['Claude 3.5', 'Computer use ve güçlü kodlama'],
-    ['Claude 4', 'Uzun süren kodlama, araştırma ve agent iş akışları'],
-    ['Sonnet 4.6', 'Kod, computer use, uzun bağlam ve planlama yeteneklerinin yükselmesi'],
+    ['Claude 2', 'Temmuz 2023', 'Claude 2', 'Uzun bağlam ve genel sohbet'],
+    ['Claude 3', 'Mart 2024', 'Claude 3 Haiku • Sonnet • Opus', 'Haiku • Sonnet • Opus; hız/zeka/maliyet dengesi'],
+    ['Claude 3.5', 'Ekim 2024', 'Claude 3.5 Sonnet (yükseltilmiş) ve 3.5 Haiku', 'Computer use ve güçlü kodlama'],
+    ['Claude 4', 'Mayıs 2025', 'Claude Opus 4 ve Claude Sonnet 4', 'Uzun süren kodlama, araştırma ve agent iş akışları'],
+    ['Sonnet 4.6', 'Şubat 2026', 'Claude Sonnet 4.6', 'Kod, computer use, uzun bağlam ve planlama yeteneklerinin yükselmesi'],
   ];
   const eco = [
     ['Claude.ai', 'Bireysel ve ekip kullanımı: yazma, analiz, araştırma, dosya ve proje çalışmaları.'],
@@ -36,8 +36,9 @@ export default async function init(el, { gsap, ScrollTrigger }) {
   <div class="s8-block" data-b="tl"><div class="wrap">
     <p class="eyebrow"><b>08</b> · Model çizgisi</p>
     <h2 class="h2 s8-h" style="max-width:none">Claude: modelden <em>çalışma arkadaşına</em></h2>
+    <p class="lead s8-sub">Claude'un model kuşakları, çıkış sırasıyla</p>
     <div class="s8-tl"><div class="s8-line"><i></i></div>
-      <div class="s8-nodes">${nodes.map(([a, b]) => `<div class="s8-node"><h4>${a}</h4><p>${b}</p></div>`).join('')}</div></div>
+      <div class="s8-nodes">${nodes.map(([a, b, c, d]) => `<div class="s8-node"><span class="d">${b}</span><h4>${a}</h4><span class="m">${c}</span><p>${d}</p></div>`).join('')}</div></div>
     <p class="s8-note">"En zeki" ifadesini iddia olarak değil, belirli benchmark ve kullanım senaryolarındaki performansla değerlendirmek gerekir.</p>
     <span class="source s8-src">[6][7][16]</span>
   </div></div>
